@@ -1,14 +1,28 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*{
+box-sizing:border-box;
+}
+
 body{
 margin:0;
-font-family:'Lato',sans-serif;
+font-family:'Lato', sans-serif;
 color:#3f4a44;
 background:#f5efe6;
-line-height:1.6;
+line-height:1.7;
 }
 
 h1,h2,h3{
-font-family:'Playfair Display',serif;
+font-family:'Playfair Display', serif;
 margin-top:0;
+letter-spacing:0.3px;
+}
+
+img{
+max-width:100%;
+display:block;
 }
 
 .container{
@@ -17,9 +31,16 @@ max-width:1100px;
 margin:auto;
 }
 
+
+
+/* =========================
+   HEADER
+========================= */
+
 header{
 background:#f5efe6;
 padding:25px 0;
+border-bottom:1px solid #e6ded3;
 }
 
 .header-inner{
@@ -28,26 +49,88 @@ align-items:center;
 justify-content:space-between;
 }
 
+.logo{
+font-weight:700;
+font-size:18px;
+}
+
 nav a{
 margin:0 12px;
 text-decoration:none;
 color:#3f4a44;
+font-weight:500;
+transition:opacity 0.2s;
 }
 
+nav a:hover{
+opacity:0.6;
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button{
+display:inline-block;
+background:#d96c4e;
+color:white;
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+border:none;
+cursor:pointer;
+transition:all 0.25s ease;
+}
+
+.button:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 16px rgba(0,0,0,0.15);
+}
+
+.button-outline{
+border:1px solid #d96c4e;
+padding:10px 18px;
+border-radius:30px;
+text-decoration:none;
+color:#d96c4e;
+transition:all 0.25s ease;
+}
+
+.button-outline:hover{
+background:#d96c4e;
+color:white;
+}
+
+.button-small{
+display:inline-block;
+margin-top:10px;
+font-size:14px;
+color:#d96c4e;
+text-decoration:none;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
-padding:80px 0;
+padding:90px 0;
 }
 
 .hero-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 align-items:center;
 }
 
 .hero-image img{
-width:100%;
-border-radius:16px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 .subtitle{
@@ -55,25 +138,37 @@ font-size:18px;
 margin-bottom:25px;
 }
 
+
+
+/* =========================
+   ABOUT (Startseite)
+========================= */
+
 .about{
 background:#efe6da;
-padding:80px 0;
+padding:90px 0;
 }
 
 .about-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 align-items:center;
 }
 
 .about-image img{
-width:100%;
-border-radius:16px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
+
+
+/* =========================
+   BENEFITS
+========================= */
+
 .benefits{
-padding:80px 0;
+padding:90px 0;
 }
 
 .benefit-grid{
@@ -85,13 +180,25 @@ margin-top:40px;
 
 .benefit{
 background:white;
-padding:30px;
-border-radius:14px;
+padding:35px;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+transition:transform 0.2s;
 }
+
+.benefit:hover{
+transform:translateY(-4px);
+}
+
+
+
+/* =========================
+   SERVICES
+========================= */
 
 .services{
 background:#efe6da;
-padding:80px 0;
+padding:90px 0;
 }
 
 .services-grid{
@@ -103,18 +210,30 @@ margin-top:40px;
 
 .service-card{
 background:white;
-padding:30px;
-border-radius:14px;
+padding:35px;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
+transition:transform 0.2s;
 }
 
+.service-card:hover{
+transform:translateY(-4px);
+}
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
 .contact{
-padding:80px 0;
+padding:90px 0;
 }
 
 .contact-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 }
 
 .contact-form{
@@ -123,7 +242,7 @@ flex-direction:column;
 gap:15px;
 }
 
-input,textarea{
+input, textarea{
 padding:12px;
 border-radius:8px;
 border:1px solid #ddd;
@@ -134,32 +253,11 @@ textarea{
 min-height:120px;
 }
 
-.button{
-display:inline-block;
-background:#d96c4e;
-color:white;
-padding:12px 22px;
-border-radius:30px;
-text-decoration:none;
-border:none;
-cursor:pointer;
-}
 
-.button-small{
-display:inline-block;
-margin-top:10px;
-font-size:14px;
-color:#d96c4e;
-text-decoration:none;
-}
 
-.button-outline{
-border:1px solid #d96c4e;
-padding:10px 18px;
-border-radius:30px;
-text-decoration:none;
-color:#d96c4e;
-}
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 background:#e9e0d3;
@@ -181,63 +279,47 @@ color:#3f4a44;
 
 
 
-/* responsive */
+/* =========================
+   ÜBER MICH SEITE
+========================= */
 
-@media(max-width:900px){
-
-.hero-grid,
-.about-grid,
-.contact-grid{
-grid-template-columns:1fr;
-}
-
-.services-grid,
-.benefit-grid{
-grid-template-columns:1fr;
-}
-
-nav{
-display:none;
-}
-
-
-}
 .two-column{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 align-items:center;
 }
 
 .about-intro{
-padding:80px 0;
+padding:90px 0;
 }
 
 .about-work{
-padding:80px 0;
+padding:90px 0;
 background:#efe6da;
 }
 
 .qualification-intro{
-padding:80px 0;
+padding:90px 0;
 }
 
 .qualification{
 background:#efe6da;
-padding:80px 0;
+padding:90px 0;
 }
 
 .about-person{
-padding:80px 0;
+padding:90px 0;
 }
 
 .image-box img{
-width:100%;
-border-radius:16px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .bullet-list{
 padding-left:20px;
+line-height:1.8;
 }
 
 .card-grid{
@@ -249,22 +331,39 @@ margin-top:40px;
 
 .card{
 background:white;
-padding:30px;
-border-radius:14px;
+padding:35px;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.06);
 }
 
 .center{
 text-align:center;
 }
 
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media(max-width:900px){
 
+.hero-grid,
+.about-grid,
+.contact-grid,
 .two-column{
 grid-template-columns:1fr;
 }
 
+.services-grid,
+.benefit-grid,
 .card-grid{
 grid-template-columns:1fr;
 }
 
+nav{
+display:none;
 }
+
+}
+
