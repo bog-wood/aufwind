@@ -200,4 +200,71 @@ nav{
 display:none;
 }
 
+
+}
+.two-column{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-intro{
+padding:80px 0;
+}
+
+.about-work{
+padding:80px 0;
+background:#efe6da;
+}
+
+.qualification-intro{
+padding:80px 0;
+}
+
+.qualification{
+background:#efe6da;
+padding:80px 0;
+}
+
+.about-person{
+padding:80px 0;
+}
+
+.image-box img{
+width:100%;
+border-radius:16px;
+}
+
+.bullet-list{
+padding-left:20px;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:14px;
+}
+
+.center{
+text-align:center;
+}
+
+@media(max-width:900px){
+
+.two-column{
+grid-template-columns:1fr;
+}
+
+.card-grid{
+grid-template-columns:1fr;
+}
+
 }
